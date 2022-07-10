@@ -1,4 +1,9 @@
 
 <mat-toolbar color="primary" >
   <button mat-icon-button (click)="togglenav()"><mat-icon>menu</mat-icon></button>
+  <span class="spacer"></span>
+	<span flex></span>
+  <mat-icon>account_circle</mat-icon>
+  {{tokenStorage.GetLocalUserNameStorage()}}
+  <button class="logoutbtn" mat-icon-button (click)="logout()" ><mat-icon>exit_to_app</mat-icon></button>
 </mat-toolbar>

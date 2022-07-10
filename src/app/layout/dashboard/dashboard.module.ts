@@ -19,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     MatNativeDateModule,
     DashboardRoutingModule,
     FormsModule,
@@ -29,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [DashboardComponent],
-  exports:[DashboardComponent]
+  bootstrap: [DashboardComponent,MenubarComponent,HeaderComponent],
+  exports:[DashboardComponent,MenubarComponent,HeaderComponent]
 })
 export class DashboardModule { }
