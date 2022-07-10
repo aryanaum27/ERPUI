@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CustomerModule } from 'src/app/modules/customer/customer.module';
-import { EnquiryComponent } from 'src/app/modules/customer/enquiry/enquiry.component';
+import { CSIModule } from 'src/app/feature-modules/csi/csi.module';
+import { CustomerModule } from 'src/app/feature-modules/customer/customer.module';
+import { EnquiryComponent } from 'src/app/feature-modules/customer/enquiry/enquiry.component';
+import { DesignModule } from 'src/app/feature-modules/design/design.module';
 import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
@@ -10,13 +12,20 @@ const routes: Routes = [
     {
     path:'customer',
     loadChildren:()=>CustomerModule
-  
-}]
+},
+{
+  path:'csi',
+  loadChildren:()=>CSIModule
+},
+{
+  path:'design',loadChildren:()=>DesignModule
+}
+]
  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class DashboardRoutingModule { }

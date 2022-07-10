@@ -35,7 +35,7 @@ export class MenubarComponent implements OnInit {
           "iconName":"keyboard_arrow_right",
       "id": 2,
           "displayName": "Screen Master",
-          "route": "Screen",
+          "route": "/dashboard/csi/role/role-details",
           "sequence": 0,
           "orderBy": 2
         },
@@ -43,7 +43,7 @@ export class MenubarComponent implements OnInit {
           "iconName":"arrow_forward_ios",
       "id": 3,
           "displayName": "Role Master",
-          "route": "Role",
+          "route": "/dashboard/csi/role",
           "sequence": 0,
           "orderBy": 3
         },
@@ -400,7 +400,7 @@ export class MenubarComponent implements OnInit {
           "iconName":"search",
       "id": 14,
           "displayName": "Bill Of Material",
-          "route": "BillOfMaterial",
+          "route": "/dashboard/design/billofmaterial",
           "sequence": 0,
           "orderBy": 1
         }

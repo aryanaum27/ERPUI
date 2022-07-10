@@ -20,15 +20,14 @@ export class CustomAuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-
+debugger;
       this._token = this.authService.GetLocalTokenStorage();
-     //console.log(this._token);
+     console.log(this._token);
       if(this._token == undefined || this._token == null || this._token.length <= 0) {
         //window.alert('Access Denied, Login is Required to Access This Page!')
         const returnUrl =
         this.route.snapshot.queryParams['returnUrl'] || '/login';
         this.router.navigateByUrl(returnUrl);
-
       }
       return true;
   }
