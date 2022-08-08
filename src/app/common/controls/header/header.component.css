@@ -3,9 +3,8 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
-  background-color: rgb(21, 99, 216);
-}
+  z-index: 9999;
+}/*
 
 .app-header {
   display: flex;
@@ -21,4 +20,16 @@ align-items: right;
 }
 .spacer {
   flex: 1 1 auto;
+} */
+.spacer {
+  flex: 1 1 auto;
+}
+.font-size-14{
+  font-size: 14px;
+}
+.mat-primary{
+  height: unset !important;
+}
+.mat-icon{
+  margin-right: 4px;
 }
